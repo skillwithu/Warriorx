@@ -826,44 +826,19 @@ async def txt_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
-    cc = f'''<pre>╔════════ ⚙️ 𝐈𝐍𝐅𝐎 ⚙️ ════════╗</pre>
+                cc = f'''
+<pre>⎯⎯⎯⎯⎯⎯⚙️ 𝐈𝐍𝐅𝐎 ⚙️⎯⎯⎯⎯⎯⎯</pre>
 📀 𝐍𝐚𝐦𝐞 : <code>{name1} [{res}p]</code><br>
 📝 𝐈𝐃 : <code>{str(count).zfill(3)}</code><br>
 📁 𝐁𝐚𝐭𝐜𝐡 : <i>{b_name}</i><br>
-<pre>╚════════ ⚙️ 𝐄𝐍𝐃 ⚙️ ════════╝</pre>
-🙏🏻 𝐓𝐡𝐚𝐧𝐤𝐬 𝐭𝐨 : <u>{CR}</u>'''
-
-    cc1 = f'''<pre>╭───📝 𝐏𝐃𝐅 𝐃𝐄𝐓𝐀𝐈𝐋𝐒 ───╮</pre>
-📌 𝐈𝐃        : <code>{str(count).zfill(3)}</code><br>
-📄 𝐓𝐢𝐭𝐥𝐞     : <code>{name1}.pdf</code><br>
-🗂️ 𝐁𝐚𝐭𝐜𝐡  : <i>{b_name}</i><br>
-<pre>╰──────────────╯</pre>
-✨ 𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐛𝐲 ➤ <u>{CR}</u>'''
-
-    cczip = f'''<pre>╭───📦 𝐙𝐈𝐏 𝐃𝐄𝐓𝐀𝐈𝐋𝐒 ───╮</pre>
-📌 𝐈𝐃        : <code>{str(count).zfill(3)}</code><br>
-📝 𝐓𝐢𝐭𝐥𝐞     : <code>{name1}.zip</code><br>
-🗂️ 𝐁𝐚𝐭𝐜𝐡  : <i>{b_name}</i><br>
-<pre>╰──────────────╯</pre>
-✨ 𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐛𝐲 ➤ <u>{CR}</u>'''
-
-    ccimg = f'''<pre>╭───🌌 𝐈𝐌𝐀𝐆𝐄 𝐃𝐄𝐓𝐀𝐈𝐋𝐒 ───╮</pre>
-📌 𝐈𝐃        : <code>{str(count).zfill(3)}</code><br>
-🌌 𝐓𝐢𝐭𝐥𝐞     : <code>{name1}.jpg</code><br>
-🗂️ 𝐁𝐚𝐭𝐜𝐡  : <i>{b_name}</i><br>
-<pre>╰──────────────╯</pre>
-✨ 𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐛𝐲 ➤ <u>{CR}</u>'''
-
-    ccm = f'''<pre>╭───🎵 𝐀𝐔𝐃𝐈𝐎 𝐃𝐄𝐓𝐀𝐈𝐋𝐒 ───╮</pre>
-📌 𝐈𝐃        : <code>{str(count).zfill(3)}</code><br>
-🎧 𝐓𝐢𝐭𝐥𝐞     : <code>{name1}.mp3</code><br>
-🗂️ 𝐁𝐚𝐭𝐜𝐡  : <i>{b_name}</i><br>
-<pre>╰──────────────╯</pre>
-✨ 𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐛𝐲 ➤ <u>{CR}</u>'''
-
-except Exception as e:
-    print(f"Error: {e}")
-
+<pre>⎯⎯⎯⎯⎯⎯⚙️ 𝐄𝐍𝐃 ⚙️⎯⎯⎯⎯⎯⎯</pre>
+🙏🏻 𝐓𝐡𝐚𝐧𝐤𝐬 𝐭𝐨 : <u>{CR}</u>
+'''
+                cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n**File Title :** `{name1} .pdf`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
+                cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{name1} .zip`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n' 
+                ccimg = f'[🖼️]Img Id : {str(count).zfill(3)}\n**Img Title :** `{name1} .jpg`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
+                ccm = f'[🎵]Audio Id : {str(count).zfill(3)}\n**Audio Title :** `{name1} .mp3`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
+                cchtml = f'[🌐]Html Id : {str(count).zfill(3)}\n**Html Title :** `{name1} .html`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
                   
                 if "drive" in url:
                     try:
