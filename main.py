@@ -827,12 +827,12 @@ async def txt_handler(bot: Client, m: Message):
 
             try:
                 cc = f'''
-<pre>⎯⎯⎯⎯⎯⎯⚙️ INFO ⚙️⎯⎯⎯⎯⎯⎯</pre>
-<b>💻 Name:</b> <code>{name1} [{res}p]</code><br>
-<b>🔍 ID:</b> <code>{str(count).zfill(3)}</code><br>
-<b>📁 Batch:</b> <i>{b_name}</i><br>
-<pre>⎯⎯⎯⎯⎯⎯⚙️ END ⚙️⎯⎯⎯⎯⎯⎯</pre>
-<b>📌 Source:</b> {CR}
+<pre>⎯⎯⎯⎯⎯⎯⚙️ 𝐈𝐍𝐅𝐎 ⚙️⎯⎯⎯⎯⎯⎯</pre>
+<b>📀 𝐍𝐚𝐦𝐞 :</b> <code>{name1} [{res}p]</code><br>
+<b>📝 𝐈𝐃 :</b> <code>{str(count).zfill(3)}</code><br>
+<b>📁 𝐁𝐚𝐭𝐜𝐡 :</b> <i>{b_name}</i><br>
+<pre>⎯⎯⎯⎯⎯⎯⚙️ 𝐄𝐍𝐃 ⚙️⎯⎯⎯⎯⎯⎯</pre>
+<b>🙏🏻 𝐓𝐡𝐚𝐧𝐤𝐬 𝐭𝐨 :</b> <u>{CR}</u>
 '''
                 cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n**File Title :** `{name1} .pdf`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
                 cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{name1} .zip`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n' 
