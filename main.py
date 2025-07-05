@@ -830,7 +830,7 @@ async def txt_handler(bot: Client, m: Message):
 <pre>⎯⎯⎯⎯⎯⎯⚙️ INFO ⚙️⎯⎯⎯⎯⎯⎯</pre>
 <b>💻 Name:</b> <code>{name1} [{res}p]</code><br>
 <b>🔍 ID:</b> <code>{str(count).zfill(3)}</code><br>
-<b>🧩 Batch:</b> <i>{b_name}</i><br>
+<b>📁 Batch:</b> <i>{b_name}</i><br>
 <pre>⎯⎯⎯⎯⎯⎯⚙️ END ⚙️⎯⎯⎯⎯⎯⎯</pre>
 <b>📌 Source:</b> {CR}
 '''
